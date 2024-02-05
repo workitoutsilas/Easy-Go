@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css-1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>EasyGo Login</title>
+    <!-- Styles -->
+    <style>
+      body {
+        background: url(Images/1.jpg) no-repeat center center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 20px;
+      }
+      .login-container {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background-color: #fff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .butn {
+        font-size: 15px;
+      }
+      .container {
+        display: grid;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: -90px;
+      }
+      .side-container {
+        background: url("Images/login.jpg") left/cover no-repeat;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      .login-container form {
+        width: 80%;
+        margin: 40px auto;
+        border-radius: 5px;
+      }
+      .login-container form label {
+        font-size: 15px;
+      }
+      .login-container form input {
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0;
+        outline: none;
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+      }
+      .login-container form input:focus {
+        box-shadow: none;
+      }
+      .login-container form input::placeholder {
+        padding: 0;
+      }
+      .login-container form button {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      @media (max-width: 768px) {
+        .side-container {
+          display: none;
+        }
+        .login-container {
+          border-radius: 10px;
+        }
+      }
+      .login-container h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="height: 60vh">
+      <div class="row">
+        <!-- Container with image background -->
+        <div class="col-md-6 side-container">
+          <h2 class="mb-4" style="color: black; font-size: 40px">Welcome!</h2>
+          <p class="p-4 text-center" style="color: black">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            veritatis officia odio id velit, nulla ipsum impedit, inventore
+            vitae placeat exercitationem minima, eaque perferendis nihil nam est
+            dicta vel voluptas!
+          </p>
+        </div>
+        <!-- Log in form -->
+        <div class="col-md-6 login-container">
+          <h2
+            class="text-center my-4 text-light"
+            style="width: 80%; background-color: blueviolet; height: 50px"
+          >
+            Log in
+          </h2>
+          <form>
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                placeholder="Enter your username"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="form-group">
+                <label class="label" for="password">Password:</label>
+                <div class="d-flex justify-content-between align-items-center">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password-one"
+                    placeholder="Enter your password"
+                    autocomplete="off"
+                    required
+                  />
+                  <div
+                    class="eye-icon d-flex align-items-center justify-content-center"
+                    style="
+                      width: 30px;
+                      margin-left:10px;
+                      margin-top:-7px;
+                      height: 30px;
+                      border-bottom: 1px solid #ced4da;
+                    "
+                  ><i class="fa-solid fa-eye-slash iconone"></i></div>
+                </div>
+            </div>
+            <div class="form-group">
+              <a href="#" class="float-right">Forgot Password?</a>
+            </div>
+            <button type="submit" class="butn mt-5 btn btn-primary btn-block">
+              Log in
+            </button>
+            <a
+              class="mt-4 butn btn btn-secondary btn-block text-white"
+              href="signup.html"
+              target="_blank"
+              aria-disabled="true"
+              >Sign Up</a
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Script files -->
+    <script src="Bootstrap/jquery.min.js"></script>
+    <script src="Bootstrap/bootstrap.min.js"></script>
+    <script src="script/login.js"></script>
+  </body>
+</html>
