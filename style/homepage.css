@@ -1,0 +1,162 @@
+/*Vital declarations*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container-fluid {
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0rem;
+}
+body {
+  transition: all 0.5s ease;
+  font-family: "Poppins", sans-serif;
+}
+/*Preloader*/
+.preloader {
+  position: fixed;
+  top: 50%;
+  left: calc(50% - 30px);
+  width: 40px;
+  height: 40px;
+  border: 5px solid #003153;
+  border-top: 5px solid whitesmoke;
+  z-index: 999;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+/* Preloader animation */
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Effect on preloader */
+header,
+main {
+  display: none;
+  -webkit-animation: spin-animate;
+  -webkit-animation-duration: 1s;
+  animation: spin-animate;
+  animation-duration: 1s;
+}
+@-webkit-keyframes spin-animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes spin-animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* First section in header element */
+.main-section {
+  background: url(/Images/5.jpg) no-repeat center center;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100vh;
+}
+/* Special style for a heading */
+.seize {
+  font-size: 50px;
+  font-weight: bolder;
+  color: rgb(40, 37, 43);
+}
+.main .container .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.second-frame {
+  border: 2px solid blue;
+}
+/* Main container in the first section in the main element */
+.wrapper {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 3rem;
+}
+/* Styling of scrollbar in "Wrapper" */
+.wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.wrapper::-webkit-scrollbar-track {
+  background-color: rgba(34, 30, 30, 0.062);
+  border-radius: 3px;
+}
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(61, 201, 171, 0.692);
+  border-radius: 3px;
+}
+/* Children styling in horizontal scrolling containers */
+.a-num {
+  width: 340px;
+  flex: none;
+  height: 490px;
+  border: 3px solid rgb(115, 111, 111);
+  border-radius: 10px;
+  will-change: transform;
+}
+.sub-child {
+  width: 100%;
+  height: 50%;
+}
+.sub-child img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Icons styling */
+.icons-set-1 i {
+  margin-right: 10px;
+}
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.icons-set-2 {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Media Queries */
+@media (max-width: 990px) {
+  .main-section {
+    height: auto;
+  }
+}
